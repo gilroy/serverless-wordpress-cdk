@@ -2,5 +2,9 @@
   "hosted-zone:account=847345004323:domainName=offthetrail.shop:region=us-east-1": {
     "Id": "/hostedzone/Z02638192XVWMMV7H4VCT",
     "Name": "offthetrail.shop."
+  },
+  "hosted-zone:account=720086100129:domainName=one11twenty.com:region=us-west-2": {
+    "Id": "/hostedzone/Z08635983RP05PSIZTQIP",
+    "Name": "one11twenty.com."
   }
 }
