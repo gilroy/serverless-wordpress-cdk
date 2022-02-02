@@ -1,10 +1,12 @@
-# Welcome to your CDK TypeScript project!
+# Serverless Wordpress CDK Deployment
 
-This is a blank project for TypeScript development with CDK.
+This CDK project utilizes Cloudfront, S3, ACM, and Route53 to deploy and serve a static website. In this case, the infrastructure is configured to deploy https://one11twenty.com.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Architecture Diagram
 
-## Useful commands
+![Sample deployment at one11twenty.com](https://imgur.com/a/ouQSnDt)
+
+# Configuration
 
  * `npm run build`   compile typescript to js
  * `npm run watch`   watch for changes and compile
