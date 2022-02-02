@@ -6,7 +6,7 @@ import * as cdk from '@aws-cdk/core';
 import * as acm from '@aws-cdk/aws-certificatemanager';
 import * as s3deploy from '@aws-cdk/aws-s3-deployment';
 
-const SITE_URL = 'offthetrail.shop';
+const SITE_URL = 'one11twenty.com';
 
 export class CoreStack extends cdk.Stack {
     readonly s3BucketName: string;
@@ -22,7 +22,7 @@ export class CoreStack extends cdk.Stack {
 
         // HostedZone 
         const zone = route53.HostedZone.fromLookup(this, 'Zone', {
-            domainName: 'offthetrail.shop'
+            domainName: 'one11twenty.com'
         });
 
         // S3 Bucket (Store Files in)
