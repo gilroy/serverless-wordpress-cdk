@@ -1,0 +1,37 @@
+name: assign reviewer by labels
+on:
+  pull_request:
+    types:
+      - unlabeled
+      - labeled
+
+jobs:
+  assign_and_remove_job:
+    runs-on: ubuntu-latest
+    name: assign and remove
+    steps:
+      - name: main
+        id: reviewer
+        uses: buildsville/assign-reviewer-by-label@v1
+        with:
+          token: "${{secrets.GITHUB_TOKEN}}"
+          labels: '[ "security" ]'
+          reviewers: '[ "gilroy", "gilroy2", "nyan" ]'
+          remove-when-no-label: 'true'
+      - name: output done
+        if: steps.reviewer.outputs.skipped == 'false'
+        run: |
+          echo "process done"
+          echo "type: ${{ steps.reviewer.outputs.type }}"
+          echo "url: ${{ steps.reviewer.outputs.url }}"
+      - name: output skipped
+        if: steps.reviewer.outputs.skipped == 'true'
+        run: |
+          echo "process skipped"
+          echo "type: ${{ steps.reviewer.outputs.type }}"
+          echo "url: ${{ steps.reviewer.outputs.url }}"
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
