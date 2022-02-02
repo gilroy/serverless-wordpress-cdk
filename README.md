@@ -4,7 +4,7 @@ This CDK project utilizes Cloudfront, S3, ACM, and Route53 to deploy and serve a
 
 ## Architecture Diagram
 
-![Sample deployment at one11twenty.com](https://imgur.com/PuzLXOA)
+![Sample deployment at one11twenty.com](https://i.imgur.com/PuzLXOA.png)
 
 # Configuration
 
